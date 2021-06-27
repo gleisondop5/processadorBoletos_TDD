@@ -1,7 +1,7 @@
 package processadorBoletos;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
 
 import boleto.Boleto;
 import fatura.Fatura;
@@ -18,7 +18,12 @@ public class ProcessadorBoletos {
 	}
 	
 	public double getValorTotalBoletos() {
-		return 0;
+		double valorTotalBoletos = 0;
+		for (Iterator i = boletos.iterator(); i.hasNext();) {
+			Boleto boleto = (Boleto) i.next();
+			valorTotalBoletos += boleto.getValorPago();
+		}
+		return valorTotalBoletos;
 	}
 
 }

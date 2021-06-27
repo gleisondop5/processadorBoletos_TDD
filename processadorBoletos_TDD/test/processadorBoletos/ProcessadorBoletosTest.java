@@ -36,7 +36,7 @@ public class ProcessadorBoletosTest {
 	@DisplayName("Testa getValorTotal")
 	public void testGetValorTotal() {
 		double valorTotalBoletos = processador.getValorTotalBoletos();
-		assertEquals(2500.00, valorTotalBoletos);
+		assertEquals(3500.00, valorTotalBoletos);
 	}
 
 }
