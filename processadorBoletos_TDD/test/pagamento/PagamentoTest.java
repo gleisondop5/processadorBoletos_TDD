@@ -36,6 +36,6 @@ public class PagamentoTest {
 	public void testSetBoletos() {
 		pagamento.setValorPago(1200.00);
 		double valorPago = pagamento.getValorPago();
-		assertEquals(100.00, valorPago);
+		assertEquals(1200.00, valorPago);
 	}
 }

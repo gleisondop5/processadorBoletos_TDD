@@ -19,6 +19,6 @@ public class Pagamento {
 	}
 	
 	public void setValorPago(double valorPago) {
-		this.valorPago = 0;
+		this.valorPago = valorPago;
 	}
 }
