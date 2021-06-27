@@ -49,10 +49,6 @@ public class ProcessadorBoletos {
 		double valorTotalFatura = fatura.getvalorTotal();
 		if(valorTotalBoletos >= valorTotalFatura) {
 			fatura.setstatuFatura("Paga");
-		}
-		else {
-			fatura.setstatuFatura("Não paga");
-		}
-		
+		}		
 	}
 }

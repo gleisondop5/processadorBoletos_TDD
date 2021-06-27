@@ -65,4 +65,18 @@ public class ProcessadorBoletosTest {
 		assertEquals("Paga", statusFatura);
 	}
 
+	@Test
+	@DisplayName("Testa se status não paga esta sendo atribuida corretamente")
+	public void testNaoPagaFatura() {
+		Boleto boleto3 = new Boleto(123, new Date(), 700.00);
+		Boleto boleto4 = new Boleto(456, new Date(), 1200.00);
+		boletos = new ArrayList();
+		boletos.add(boleto3);
+		boletos.add(boleto4);
+		fatura = new Fatura("telefone", 2000.00, new Date());
+		processador = new ProcessadorBoletos(boletos, fatura);
+		processador.pagaFatura();
+		String statusFatura = fatura.getstatuFatura();
+		assertEquals("Não paga", statusFatura);
+	}
 }
