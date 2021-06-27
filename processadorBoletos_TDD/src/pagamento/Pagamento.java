@@ -31,6 +31,6 @@ public class Pagamento {
 	}
 	
 	public String getTipoPagamento() {
-		return null;
+		return tipoPagamento;
 	}
 }
