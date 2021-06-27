@@ -39,5 +39,6 @@ public class ProcessadorBoletos {
 		}
 		return pagamentoBoletos;
 	}
-
+	
+	public void pagaFatura() {}
 }

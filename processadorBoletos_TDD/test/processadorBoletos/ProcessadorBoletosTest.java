@@ -1,5 +1,6 @@
 package processadorBoletos;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
@@ -29,7 +30,8 @@ public class ProcessadorBoletosTest {
 	public void inicializa() {
 		boletos.add(boleto1);
 		boletos.add(boleto2);
-		boletos.add(boleto3);		
+		boletos.add(boleto3);	
+		fatura = new Fatura("luz", 3500.00, new Date());
 		processador = new ProcessadorBoletos(boletos, fatura);
 	}
 	
@@ -46,6 +48,21 @@ public class ProcessadorBoletosTest {
 		ArrayList<Pagamento> pagamentoBoletos = processador.criarPagamento();
 		int qtdPagamentos = pagamentoBoletos.size();
 		assertEquals(3, qtdPagamentos);
+	}
+	
+	@Test
+	@DisplayName("Testa se status paga esta sendo atribuida corretamente")
+	public void testPagaFatura() {
+		Boleto boleto3 = new Boleto(123, new Date(), 700.00);
+		Boleto boleto4 = new Boleto(456, new Date(), 1200.00);
+		boletos = new ArrayList();
+		boletos.add(boleto3);
+		boletos.add(boleto4);
+		fatura = new Fatura("telefone", 2000.00, new Date());
+		processador = new ProcessadorBoletos(boletos, fatura);
+		processador.pagaFatura();
+		String statusFatura = fatura.getstatuFatura();
+		assertEquals("Paga", statusFatura);
 	}
 
 }
