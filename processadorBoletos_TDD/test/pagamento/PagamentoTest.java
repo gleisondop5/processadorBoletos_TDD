@@ -47,4 +47,13 @@ public class PagamentoTest {
 		Date dataPagamento = pagamento.getDataPagamento();
 		assertTrue(data.equals(dataPagamento));
 	}
+	
+	@Test
+	@DisplayName("Testa setDataPagamento")
+	public void testSetDataPagamento() {
+		Date data = new Date();
+		pagamento.setDataPagamento(data);
+		Date dataPagamento = pagamento.getDataPagamento();
+		assertEquals(data, dataPagamento);
+	}
 }
