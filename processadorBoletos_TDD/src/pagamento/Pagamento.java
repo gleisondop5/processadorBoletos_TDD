@@ -27,7 +27,6 @@ public class Pagamento {
 	}
 	
 	public void setDataPagamento(Date dataPagamento) {
-		Date data = new Date(2014, 02, 21);
-		this.dataPagamento = data;
+		this.dataPagamento = dataPagamento;
 	}
 }
