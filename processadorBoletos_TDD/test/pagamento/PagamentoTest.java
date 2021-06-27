@@ -56,4 +56,12 @@ public class PagamentoTest {
 		Date dataPagamento = pagamento.getDataPagamento();
 		assertEquals(data, dataPagamento);
 	}
+	
+	@Test
+	@DisplayName("Testa getTipoPagamento")
+	public void testGetTipoPagamento() {
+		String tipoPagamento = pagamento.getTipoPagamento();
+		assertEquals("Boleto", tipoPagamento);
+	}
 }
+

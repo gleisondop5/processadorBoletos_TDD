@@ -29,4 +29,8 @@ public class Pagamento {
 	public void setDataPagamento(Date dataPagamento) {
 		this.dataPagamento = dataPagamento;
 	}
+	
+	public String getTipoPagamento() {
+		return null;
+	}
 }
