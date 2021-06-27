@@ -30,6 +30,13 @@ public class ProcessadorBoletos {
 	
 	public ArrayList<Pagamento> criarPagamento() {
 		ArrayList<Pagamento> pagamentoBoletos = new ArrayList();		 
+		for (Iterator i = boletos.iterator(); i.hasNext();) {			
+			Boleto boleto = (Boleto) i.next();
+			double valorBoleto = boleto.getValorPago();
+			Date dataPagamento = new Date();			 
+			Pagamento pagamento = new Pagamento(valorBoleto, dataPagamento, "Boleto");
+			pagamentoBoletos.add(pagamento);
+		}
 		return pagamentoBoletos;
 	}
 
