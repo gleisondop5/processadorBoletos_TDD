@@ -35,6 +35,6 @@ public class Pagamento {
 	}
 	
 	public void setTipoPagamento(String tipoPagamento) {
-		this.tipoPagamento = null;
+		this.tipoPagamento = tipoPagamento;
 	}
 }
