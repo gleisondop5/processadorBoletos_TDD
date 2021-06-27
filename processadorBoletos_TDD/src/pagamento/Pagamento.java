@@ -21,4 +21,9 @@ public class Pagamento {
 	public void setValorPago(double valorPago) {
 		this.valorPago = valorPago;
 	}
+	
+	public Date getDataPagamento() {
+		Date myDate = new Date(2014, 02, 11);
+		return myDate;
+	}
 }

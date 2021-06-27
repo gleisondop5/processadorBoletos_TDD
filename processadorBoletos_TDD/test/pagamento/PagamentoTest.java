@@ -38,4 +38,12 @@ public class PagamentoTest {
 		double valorPago = pagamento.getValorPago();
 		assertEquals(1200.00, valorPago);
 	}
+	
+	@Test
+	@DisplayName("Testa getDataPagamento")
+	public void testGetDataPagamento() {
+		Date data = new Date();
+		Date dataPagamento = pagamento.getDataPagamento();
+		assertEquals(data, dataPagamento);
+	}
 }
