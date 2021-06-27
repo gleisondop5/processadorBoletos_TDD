@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import boleto.Boleto;
 import fatura.Fatura;
+import pagamento.Pagamento;
 
 
 public class ProcessadorBoletosTest {
@@ -37,6 +38,14 @@ public class ProcessadorBoletosTest {
 	public void testGetValorTotal() {
 		double valorTotalBoletos = processador.getValorTotalBoletos();
 		assertEquals(3500.00, valorTotalBoletos);
+	}
+	
+	@Test
+	@DisplayName("Testa se pagamentos estão sendo gerados")
+	public void testCriarPagamento() {
+		ArrayList<Pagamento> pagamentoBoletos = processador.criarPagamento();
+		int qtdPagamentos = pagamentoBoletos.size();
+		assertEquals(3, qtdPagamentos);
 	}
 
 }

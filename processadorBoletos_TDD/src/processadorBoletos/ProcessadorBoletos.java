@@ -1,10 +1,12 @@
 package processadorBoletos;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 
 import boleto.Boleto;
 import fatura.Fatura;
+import pagamento.Pagamento;
 
 public class ProcessadorBoletos {
 	
@@ -24,6 +26,11 @@ public class ProcessadorBoletos {
 			valorTotalBoletos += boleto.getValorPago();
 		}
 		return valorTotalBoletos;
+	}
+	
+	public ArrayList<Pagamento> criarPagamento() {
+		ArrayList<Pagamento> pagamentoBoletos = new ArrayList();		 
+		return pagamentoBoletos;
 	}
 
 }
