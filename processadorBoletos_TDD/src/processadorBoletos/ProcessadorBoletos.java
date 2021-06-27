@@ -40,5 +40,19 @@ public class ProcessadorBoletos {
 		return pagamentoBoletos;
 	}
 	
-	public void pagaFatura() {}
+	public void pagaFatura() {
+		double valorTotalBoletos = 0;
+		for (Iterator i = boletos.iterator(); i.hasNext();) {
+			Boleto boleto = (Boleto) i.next();
+			valorTotalBoletos += boleto.getValorPago();
+		}
+		double valorTotalFatura = fatura.getvalorTotal();
+		if(valorTotalBoletos >= valorTotalFatura) {
+			fatura.setstatuFatura("Paga");
+		}
+		else {
+			fatura.setstatuFatura("Não paga");
+		}
+		
+	}
 }

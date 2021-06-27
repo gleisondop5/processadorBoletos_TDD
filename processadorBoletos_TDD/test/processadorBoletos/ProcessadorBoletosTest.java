@@ -53,7 +53,7 @@ public class ProcessadorBoletosTest {
 	@Test
 	@DisplayName("Testa se status paga esta sendo atribuida corretamente")
 	public void testPagaFatura() {
-		Boleto boleto3 = new Boleto(123, new Date(), 700.00);
+		Boleto boleto3 = new Boleto(123, new Date(), 800.00);
 		Boleto boleto4 = new Boleto(456, new Date(), 1200.00);
 		boletos = new ArrayList();
 		boletos.add(boleto3);
