@@ -15,6 +15,6 @@ public class Pagamento {
 	}
 	
 	public double getValorPago() {
-		return 0;
+		return valorPago;
 	}
 }
