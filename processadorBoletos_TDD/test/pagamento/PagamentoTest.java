@@ -1,6 +1,7 @@
 package pagamento;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Date;
@@ -44,6 +45,6 @@ public class PagamentoTest {
 	public void testGetDataPagamento() {
 		Date data = new Date();
 		Date dataPagamento = pagamento.getDataPagamento();
-		assertEquals(data, dataPagamento);
+		assertTrue(data.equals(dataPagamento));
 	}
 }

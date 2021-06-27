@@ -23,7 +23,6 @@ public class Pagamento {
 	}
 	
 	public Date getDataPagamento() {
-		Date myDate = new Date(2014, 02, 11);
-		return myDate;
+		return dataPagamento;
 	}
 }
