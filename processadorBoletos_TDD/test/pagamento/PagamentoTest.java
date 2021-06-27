@@ -30,4 +30,12 @@ public class PagamentoTest {
 		double valorPago = pagamento.getValorPago();
 		assertEquals(1500.00, valorPago);
 	}
+	
+	@Test
+	@DisplayName("Testa setValorPago")
+	public void testSetBoletos() {
+		pagamento.setValorPago(1200.00);
+		double valorPago = pagamento.getValorPago();
+		assertEquals(100.00, valorPago);
+	}
 }

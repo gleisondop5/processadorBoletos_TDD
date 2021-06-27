@@ -17,4 +17,8 @@ public class Pagamento {
 	public double getValorPago() {
 		return valorPago;
 	}
+	
+	public void setValorPago(double valorPago) {
+		this.valorPago = 0;
+	}
 }
