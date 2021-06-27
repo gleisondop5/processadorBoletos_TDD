@@ -63,5 +63,13 @@ public class PagamentoTest {
 		String tipoPagamento = pagamento.getTipoPagamento();
 		assertEquals("Boleto", tipoPagamento);
 	}
+	
+	@Test
+	@DisplayName("Testa setTipoPagamento")
+	public void testSetTipoPagamento() {
+		pagamento.setTipoPagamento("Boleto");
+		String tipoPagamento = pagamento.getTipoPagamento();
+		assertEquals("Boleto", tipoPagamento);
+	}
 }
 

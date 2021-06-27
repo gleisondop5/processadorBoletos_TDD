@@ -33,4 +33,8 @@ public class Pagamento {
 	public String getTipoPagamento() {
 		return tipoPagamento;
 	}
+	
+	public void setTipoPagamento(String tipoPagamento) {
+		this.tipoPagamento = null;
+	}
 }
