@@ -23,4 +23,11 @@ public class PagamentoTest {
 	public void testPagamento() {	
 		assertNotNull(pagamento);		
 	}
+	
+	@Test
+	@DisplayName("Testa getValorPago")
+	public void testAddBoletos() {
+		double valorPago = pagamento.getValorPago();
+		assertEquals(1500.00, valorPago);
+	}
 }
